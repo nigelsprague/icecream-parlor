@@ -21,36 +21,44 @@
             <div onclick="orderItem('Cookie Dough')" class="col-md-4 card">Cookie Dough</div>
             <div onclick="orderItem('Vanilla')" class="col-md-4 card">Vanilla</div>
             <div onclick="orderItem('Chocolate')" class="col-md-4 card">Chocolate</div>
-            <!-- <div class="col-md-4 card"></div>
-            <div class="col-md-4 card"></div>
-            <div class="col-md-4 card"></div> -->
+            <div onclick="orderItem('Strawberry')" class="col-md-4 card">Strawberry</div>
+            <div onclick="orderItem('Birthday Cake')" class="col-md-4 card">Birthday Cake</div>
+            <div onclick="orderItem('Moose Tracks')" class="col-md-4 card">Moose Tracks</div>
           </section>
           <section class="row">
             <h4>Toppings</h4>
-            <div class="col-md-4 card">Sprinkles</div>
-            <div class="col-md-4 card">Chocolate Chips</div>
-            <div class="col-md-4 card">Cookie Chunks</div>
-            <!-- <section class="row">Vessels
-              <div class="col-md-4 card"></div>
-              <div class="col-md-4 card"></div>
-              <div class="col-md-4 card"></div>
-            </section> -->
+            <div onclick="orderItem('Sprinkles')" class="col-md-4 card">Sprinkles</div>
+            <div onclick="orderItem('Chocolate Chips')" class="col-md-4 card">Chocolate Chips</div>
+            <div onclick="orderItem('Cookie Chucks')" class="col-md-4 card">Cookie Chunks</div>
+          </section>
+          <section class="row">
+            <h4>Vessels</h4>
+            <div onclick="orderItem('Bowl')" class="col-md-4 card">Bowl</div>
+            <div onclick="orderItem('Sugar Cone')" class="col-md-4 card">Sugar Cone</div>
+            <div onclick="orderItem('Waffle Cone')" class="col-md-4 card">Waffle Cone</div>
           </section>
         </div>
         <div class="col-md-6">
-          <section class="row">
-            <div class="col card">
-              <div class="col-12">
-                <h4>Cart</h4>
-              </div>
-              <hr>
-              <div id="cart" class="col-12"></div>
-              <hr>
-              <div id="total" class="col-12">Total</div>
-            </div>
-          </section>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="cart">
+
+            </tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Total:</td>
+              <td id="total">$0.00</td>
+            </tr>
+          </table>
         </div>
-      </section>
     </div>
   </main>
   <script src="app.js"></script>
