@@ -8,15 +8,32 @@ const iceCream = [
   { name: 'Chocolate Chips', price: 0.25, quantity: 0, type: 'topping' },
   { name: 'Cookie Chunks', price: 0.50, quantity: 0, type: 'topping' }
 ]
-let orderTotal = 0
 
-function orderItem(selectedItem) {
-  console.log(selectedItem)
+function orderItem(itemName) {
+  let itemOrdered = null
   for (let i = 0; i < iceCream.length; i++) {
-    let itemElement = iceCream[i]
-    if (itemElement.name == selectedItem) {
-      console.log(i, selectedItem, itemElement)
+    let item = iceCream[i]
+    if (item.name == itemName) {
+      itemOrdered = item
     }
-
   }
+  itemOrdered.quantity++
+  console.log(itemOrdered)
+  drawOrder()
+}
+
+function calcTotal() {
+  let total = 0
+  for (let i = 0; i < iceCream.length; i++) {
+    let item = iceCream[i];
+    total += item.price * item.quantity
+  }
+  console.log(total)
+  return total
+
+}
+
+function drawOrder() {
+  let grandTotal = calcTotal()
+  document.getElementById('total').innerText = grandTotal.toFixed(2)
 }
